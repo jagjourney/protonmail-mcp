@@ -1,0 +1,63 @@
+{
+  "name": "protonmail-mcp",
+  "version": "1.6.3",
+  "description": "MCP server for managing Protonmail via Protonmail Bridge (IMAP/SMTP)",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "protonmail-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "protonmail",
+    "proton-mail",
+    "email",
+    "imap",
+    "smtp",
+    "claude",
+    "claude-desktop",
+    "model-context-protocol",
+    "ai",
+    "email-management"
+  ],
+  "author": "Jag Journey, LLC",
+  "license": "MIT",
+  "homepage": "https://github.com/jagjourney/protonmail-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagjourney/protonmail-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jagjourney/protonmail-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "dotenv": "^16.4.7",
+    "imapflow": "^1.0.171",
+    "mailparser": "^3.9.6",
+    "node-ical": "^0.25.6",
+    "nodemailer": "^6.9.16",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.4.6",
+    "@types/nodemailer": "^6.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
